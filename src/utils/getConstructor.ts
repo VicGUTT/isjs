@@ -1,9 +1,5 @@
-// import { Constructor } from '../types';
+import { Constructor } from '../types';
 
-// export default function getConstructor(value: unknown): Constructor | null {
-
-import { UnknownConstructor } from '../types';
-
-export default function getConstructor(value: unknown): UnknownConstructor | null {
+export default function getConstructor<T>(value: unknown): Constructor<T> | null {
     return value !== null && typeof value !== 'undefined' ? Object.getPrototypeOf(value)?.constructor ?? null : null;
 }

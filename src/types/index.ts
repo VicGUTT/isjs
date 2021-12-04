@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 /*
  *--------------------------------------------------------------------------
- * Utility/Helper Types
+ * Utility Types
  *--------------------------------------------------------------------------
  *
  * TypeScript provides several utility types to facilitate common type
@@ -16,7 +18,6 @@ export type Truthy<T> = Exclude<T, Falsy>; // https://developer.mozilla.org/en-U
 
 export type Empty<T> = Exclude<
     T,
-    // eslint-disable-next-line @typescript-eslint/ban-types
     Truthy<T> | Function | UnknownObject | { readonly length: Truthy<T> } | { readonly size: Truthy<T> }
 >;
 export type Defined<T> = Exclude<T, undefined>;
@@ -58,51 +59,19 @@ export type Numeric = number | string;
 export type UnknownObject = Record<string | number | symbol, unknown>;
 export type Primitive = null | undefined | boolean | number | string | symbol | bigint;
 export type Derivative<T> = Exclude<T, Primitive>;
-export type Lengthy<T extends {} = {}> = T & { length: number }; // eslint-disable-line @typescript-eslint/ban-types
-export type Sizey<T extends {} = {}> = T & { size: number }; // eslint-disable-line @typescript-eslint/ban-types
-export type Iterable<T extends {} = {}> = T & { [Symbol.iterator]: Object }; // eslint-disable-line @typescript-eslint/ban-types
+export type Lengthy<T extends {} = {}> = T & { length: number };
+export type Sizey<T extends {} = {}> = T & { size: number };
+export type Iterable<T extends {} = {}> = T & { [Symbol.iterator]: Object };
 
 /*
- * ---------------------------------------------------------------------------------------------------------------
+ *--------------------------------------------------------------------------
+ * Helper Types
+ *--------------------------------------------------------------------------
  */
 
-// @see https://www.simonholywell.com/post/typescript-constructor-type.html
+export type UnknownConstructor<T extends {} = {}> = new (...args: any[]) => T; // eslint-disable-line @typescript-eslint/no-explicit-any
+export type UnknownConstructorFunction<T extends {} = {}> = (...args: any[]) => T; // eslint-disable-line @typescript-eslint/no-explicit-any
+export type ConstructorLike<T = unknown> = { readonly prototype: T };
+export type Constructor<T extends {} = {}> = ConstructorLike & (UnknownConstructor<T> | UnknownConstructorFunction<T>);
 
-// export type Constructor<T extends {} = {}> = new (...args: any[]) => T;
-// export type Constructor<T extends Object = Object> = new (...args: unknown[]) => T;
-// export type Constructor<T extends Record<string, unknown> = Record<string, unknown>> = new (...args: unknown[]) => T;
-
-// // @ts-expect-error "value" should be an object now and therefore have a "constructor" method
-// export type Constructor<T extends {} = {}> = new (...args: unknown[]) => T;
-
-export type ConstructorLike = { readonly prototype: unknown };
-export type AnyConstructor =
-    | ArrayConstructor
-    | DateConstructor
-    | NumberConstructor
-    | ObjectConstructor
-    | RegExpConstructor
-    | StringConstructor
-    | FunctionConstructor
-    | BooleanConstructor
-    | ErrorConstructor
-    | ArrayBufferConstructor
-    | DataViewConstructor
-    | Int8ArrayConstructor
-    | Uint8ArrayConstructor
-    | Uint8ClampedArrayConstructor
-    | Int16ArrayConstructor
-    | Uint16ArrayConstructor
-    | Int32ArrayConstructor
-    | Uint32ArrayConstructor
-    | Float32ArrayConstructor
-    | Float64ArrayConstructor
-    | SymbolConstructor
-    | MapConstructor
-    | WeakMapConstructor
-    | SetConstructor
-    | WeakSetConstructor
-    | PromiseConstructor
-    | BigIntConstructor;
-export type UnknownConstructor = ConstructorLike & AnyConstructor;
-// export type Constructor<T extends AnyConstructor> = new (...args: unknown[]) => T;
+/* eslint-enable @typescript-eslint/ban-types */

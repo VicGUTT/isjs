@@ -15,6 +15,7 @@ import isElement from './isElement';
 import isEvent from './isEvent';
 import isFalsy from './isFalsy';
 import isFloat from './isFloat';
+import isFormData from './isFormData';
 import isFunction from './isFunction';
 import isInfinity from './isInfinity';
 import isInt from './isInt';
@@ -40,6 +41,7 @@ import isSymbol from './isSymbol';
 import isTextNode from './isTextNode';
 import isTruthy from './isTruthy';
 import isUndefined from './isUndefined';
+import isUrlSearchParams from './isUrlSearchParams';
 import isWeakMap from './isWeakMap';
 import isWeakSet from './isWeakSet';
 
@@ -83,6 +85,7 @@ export default {
     falsy: isFalsy,
     filled: isFilled,
     float: isFloat,
+    formData: isFormData,
     function: isFunction,
     infinity: isInfinity,
     int: isInt,
@@ -111,6 +114,7 @@ export default {
     truthy: isTruthy,
     typedAs: isTypedAs,
     undefined: isUndefined,
+    urlSearchParams: isUrlSearchParams,
     weakMap: isWeakMap,
     weakSet: isWeakSet,
     get SUPER_TYPES(): SuperType[] {

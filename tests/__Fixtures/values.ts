@@ -171,6 +171,8 @@ export const instances = [
     new String('hey'),
     new Array('hey'),
     new Object('hey'),
+    new FormData(),
+    new URLSearchParams(),
     Object('hey'),
     ...classes.map((item) => new item()),
     ...constructors.map((item) => {

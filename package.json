@@ -75,32 +75,32 @@
         "analyze": "npm run prod && size-limit --why"
     },
     "devDependencies": {
-        "@commitlint/cli": "^13.1.0",
-        "@commitlint/config-conventional": "^13.1.0",
-        "@size-limit/preset-small-lib": "^5.0.3",
-        "@types/jest": "^27.0.1",
-        "@types/lodash": "^4.14.172",
-        "@types/node": "^16.6.1",
-        "@typescript-eslint/eslint-plugin": "^4.29.1",
-        "@typescript-eslint/parser": "^4.29.1",
-        "eslint": "^7.32.0",
+        "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
+        "@size-limit/preset-small-lib": "^7.0.3",
+        "@types/jest": "^27.0.3",
+        "@types/lodash": "^4.14.177",
+        "@types/node": "^16.11.11",
+        "@typescript-eslint/eslint-plugin": "^5.5.0",
+        "@typescript-eslint/parser": "^5.5.0",
+        "eslint": "^8.4.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-eslint-comments": "^3.2.0",
-        "eslint-plugin-jsonc": "^1.5.0",
-        "eslint-plugin-prettier": "^3.4.0",
-        "husky": "^7.0.1",
-        "jest": "^27.0.6",
-        "jsdoc-to-markdown": "^7.0.1",
-        "lint-staged": "^11.1.2",
+        "eslint-plugin-jsonc": "^2.0.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "jest": "^27.4.3",
+        "jsdoc-to-markdown": "^7.1.0",
+        "lint-staged": "^12.1.2",
         "lodash": "^4.17.21",
-        "np": "^7.5.0",
+        "np": "^7.6.0",
         "pinst": "^2.1.6",
-        "prettier": "^2.3.2",
-        "size-limit": "^5.0.3",
-        "ts-jest": "^27.0.4",
+        "prettier": "^2.5.0",
+        "size-limit": "^7.0.3",
+        "ts-jest": "^27.0.7",
         "tslib": "^2.3.1",
-        "typescript": "^4.4.3",
-        "vite": "^2.4.4"
+        "typescript": "^4.5.2",
+        "vite": "^2.6.14"
     },
     "homepage": "https://github.com/VicGUTT/isjs#readme",
     "repository": {
@@ -113,15 +113,15 @@
     "size-limit": [
         {
             "path": "dist/isjs.es.js",
-            "limit": "1.1 KB"
+            "limit": "1.5 KB"
         },
         {
             "path": "dist/isjs.umd.js",
-            "limit": "1.1 KB"
+            "limit": "1.5 KB"
         },
         {
             "path": "dist/**/*.js",
-            "limit": "3 KB"
+            "limit": "15 KB"
         }
     ],
     "np": {

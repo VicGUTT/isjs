@@ -413,6 +413,15 @@ isFloat(123.0); // false
 isFloat(123.123); // true
 ```
 
+### • **is.formData / isFormData** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isFormData.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isFormData.test.ts))_
+
+Determines whether the given value is a FormData object.
+
+```js
+isFormData({}); // false
+isFormData(new FormData()); // true
+```
+
 ### • **is.function / isFunction** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isFunction.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isFunction.test.ts))_
 
 Determines whether the given value is a function.
@@ -898,6 +907,15 @@ Determines whether the given value is `undefined`.
 isUndefined(123); // false
 isUndefined(''); // false
 isUndefined(undefined); // true
+```
+
+### • **is.urlSearchParams / isUrlSearchParams** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isUrlSearchParams.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isUrlSearchParams.test.ts))_
+
+Determines whether the given value is a URLSearchParams object.
+
+```js
+isUrlSearchParams({}); // false
+isUrlSearchParams(new URLSearchParams()); // true
 ```
 
 ### • **is.weakMap / isWeakMap** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isWeakMap.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isWeakMap.test.ts))_

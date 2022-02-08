@@ -36,6 +36,8 @@ Then you may chose to import each individual functions separately _(`import isFo
 
 **Note**: This library is very "future facing" in the code that is distributed _(dist folder)_, meaning it requires at least Node14+ and ES2020/ES2021 support from your JS compiler/bundler or browser.
 
+**Note bis**: Check out the [pro tips](#pro-tips) bellow.
+
 ## Constants
 
 A couple helper constants are provided by the library.
@@ -937,6 +939,50 @@ isWeakSet(new WeakSet()); // true
 ```
 
 <!-- /{{ CONTENT }} -->
+
+## Pro tips
+
+### Import what you need
+
+For better tree shaking support and not having to import all the available functions when only a few is needed, I recommend creating and exporting a custom `is` object containing only the functions needed.
+
+Something similar to:
+
+```js
+// utils/is.js
+
+import isString from '@vicgutt/isjs/isString';
+import isClass from '@vicgutt/isjs/isClass';
+import isFunction from '@vicgutt/isjs/isFunction';
+
+export default {
+    string: isString,
+    class: isClass,
+    function: isFunction,
+};
+
+// some-folder/some-file.js
+import is from '../utils/is';
+
+if (is.string(someVariable)) {
+    //
+}
+```
+
+### Ensure TypeScript support
+
+This library uses the newer Node's package.json's [`exports`](https://nodejs.org/api/packages.html#exports) field to expose the individual functions to end users which may cause TypeScript not knowing where to get the associated `.d.ts` files.
+Therefore, if on a none compatible TypeScript version _(which seems to be the case on the latest v4.5.5)_, I'd recomment adding the following key/values to your `tsconfig.json`.
+
+```json
+{
+    // ...
+    "baseUrl": ".",
+    "paths": {
+        "@vicgutt/isjs/*": ["./node_modules/@vicgutt/isjs/dist/*"]
+    }
+}
+```
 
 <!-- ## Changelog
 

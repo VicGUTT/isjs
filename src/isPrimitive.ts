@@ -13,7 +13,7 @@ import isString from './isString';
  * - null
  * - undefined
  * - boolean
- * - number
+ * - number _(including: number, NaN, Infinity)_
  * - string
  * - symbol
  * - bigint

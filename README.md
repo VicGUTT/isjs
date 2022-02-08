@@ -748,7 +748,7 @@ A value is considered a "primitive" if it is equal to one of the following:
 -   null
 -   undefined
 -   boolean
--   number
+-   number _(including: number, NaN, Infinity)_
 -   string
 -   symbol
 -   bigint

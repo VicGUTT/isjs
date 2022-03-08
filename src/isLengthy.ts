@@ -1,7 +1,7 @@
 import { Lengthy } from './types';
 
 /**
- * Determines whether the given value is a "lengthy".
+ * Determines whether the given value is "lengthy".
  *
  * A value is considered "lengthy" if it has a `length`
  * property that returns a number.

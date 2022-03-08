@@ -1,7 +1,7 @@
 import { Sizey } from './types';
 
 /**
- * Determines whether the given value is a "sizey".
+ * Determines whether the given value is "sizey".
  *
  * A value is considered "sizey" if it has a `size`
  * property that returns a number.

@@ -34,7 +34,7 @@ yarn add @vicgutt/isjs
 
 Then you may chose to import each individual functions separately _(`import isFoo from '@vicgutt/isjs/isFoo'`)_ or import an object containing all available functions _(`import is from '@vicgutt/isjs'`)_;
 
-**Note**: This library is very "future facing" in the code that is distributed _(dist folder)_, meaning it requires at least Node14+ and ES2020/ES2021 support from your JS compiler/bundler or browser.
+**Note**: This library is very "future facing" in the code that is distributed _(dist folder)_, meaning it requires at least Node16+ and ES2020/ES2021 support from your JS compiler/bundler or browser.
 
 **Note bis**: Check out the [pro tips](#pro-tips) bellow.
 
@@ -962,6 +962,7 @@ export default {
 };
 
 // some-folder/some-file.js
+
 import is from '../utils/is';
 
 if (is.string(someVariable)) {
@@ -972,11 +973,10 @@ if (is.string(someVariable)) {
 ### Ensure TypeScript support
 
 This library uses the newer Node's package.json's [`exports`](https://nodejs.org/api/packages.html#exports) field to expose the individual functions to end users which may cause TypeScript not knowing where to get the associated `.d.ts` files.
-Therefore, if on a none compatible TypeScript version _(which seems to be the case on the latest v4.5.5)_, I'd recomment adding the following key/values to your `tsconfig.json`.
+Therefore, if on a non compatible TypeScript version _(which seems to be the case on the latest v4.5.5)_, I'd recomment adding the following key/values to your `tsconfig.json`.
 
 ```json
 {
-    // ...
     "baseUrl": ".",
     "paths": {
         "@vicgutt/isjs/*": ["./node_modules/@vicgutt/isjs/dist/*"]

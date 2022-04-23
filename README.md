@@ -136,6 +136,21 @@ isArray(Array(123)); // true
 isArray(new Array(123)); // true
 ```
 
+### • **is.asyncFunction / isAsyncFunction** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isAsyncFunction.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isAsyncFunction.test.ts))_
+
+Determines whether the given value is an async function.
+
+```js
+isAsyncFunction(123); // false
+isAsyncFunction(new (class Hello {})()); // false
+isAsyncFunction(() => {}); // false
+isAsyncFunction(function () {}); // false
+isAsyncFunction(function hello() {}); // false
+isAsyncFunction(class Hello {}); // false
+isAsyncFunction(new Function()); // false
+isFunction(async function hello() {}); // true
+```
+
 ### • **is.bigInt / isBigInt** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isBigInt.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isBigInt.test.ts))_
 
 Determines whether the given value is a bigint.
@@ -434,6 +449,7 @@ isFunction(new (class Hello {})()); // false
 isFunction(() => {}); // true
 isFunction(function () {}); // true
 isFunction(function hello() {}); // true
+isFunction(async function hello() {}); // true
 isFunction(class Hello {}); // true
 isFunction(new Function()); // true
 ```
@@ -493,7 +509,7 @@ isIterable({ hey: 'hello', [Symbol.iterator]: function () {} }); // true
 
 ### • **is.lengthy / isLengthy** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isLengthy.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isLengthy.test.ts))_
 
-Determines whether the given value is a "lengthy".
+Determines whether the given value is "lengthy".
 
 A value is considered "lengthy" if it has a `length`
 property that returns a number.
@@ -787,7 +803,7 @@ isSet(new Set()); // true
 
 ### • **is.sizey / isSizey** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isSizey.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isSizey.test.ts))_
 
-Determines whether the given value is a "sizey".
+Determines whether the given value is "sizey".
 
 A value is considered "sizey" if it has a `size`
 property that returns a number.
@@ -825,6 +841,21 @@ Determines whether the given value is a Symbol.
 ```js
 isSymbol(123); // false
 isSymbol(Symbol(123)); // true
+```
+
+### • **is.syncFunction / isSyncFunction** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isSyncFunction.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isSyncFunction.test.ts))_
+
+Determines whether the given value is a sync function.
+
+```js
+isFunction(123); // false
+isFunction(new (class Hello {})()); // false
+isFunction(async function hello() {}); // false
+isFunction(() => {}); // true
+isFunction(function () {}); // true
+isFunction(function hello() {}); // true
+isFunction(class Hello {}); // true
+isFunction(new Function()); // true
 ```
 
 ### • **is.textNode / isTextNode** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isTextNode.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isTextNode.test.ts))_

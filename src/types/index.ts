@@ -55,7 +55,10 @@ export type TypedAs = Exclude<Type, 'null' | 'undefined' | 'number' | 'primitive
 
 export type Nil = null | undefined;
 export type Numeric = number | string;
-// export type Func = () => void;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type UnknownFunction = (...args: any[]) => unknown;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type UnknownAsyncFunction = (...args: any[]) => Promise<unknown>;
 export type UnknownObject = Record<string | number | symbol, unknown>;
 export type Primitive = null | undefined | boolean | number | string | symbol | bigint;
 export type Derivative<T> = Exclude<T, Primitive>;
@@ -73,5 +76,8 @@ export type UnknownConstructor<T extends {} = {}> = new (...args: any[]) => T; /
 export type UnknownConstructorFunction<T extends {} = {}> = (...args: any[]) => T; // eslint-disable-line @typescript-eslint/no-explicit-any
 export type ConstructorLike<T = unknown> = { readonly prototype: T };
 export type Constructor<T extends {} = {}> = ConstructorLike & (UnknownConstructor<T> | UnknownConstructorFunction<T>);
+
+// Alterative ?
+// - export type Constructor<T = object, A extends any[] = any[], Static = {}> = (new (...a: A) => T) & Static (https://github.com/trusktr/lowclass/blob/b5c526aa800e64cd20443a95faf2bf0dc31aec41/src/utils.ts#L129)
 
 /* eslint-enable @typescript-eslint/ban-types */

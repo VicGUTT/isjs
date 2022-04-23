@@ -1,4 +1,4 @@
-import getConstructor from './utils/getConstructor';
+import { UnknownFunction } from './types';
 
 /**
  * Determines whether the given value is a function.
@@ -10,11 +10,11 @@ import getConstructor from './utils/getConstructor';
  * isFunction(() => {}); // true
  * isFunction(function() {}); // true
  * isFunction(function hello() {}); // true
+ * isFunction(async function hello() {}); // true
  * isFunction(class Hello {}); // true
  * isFunction(new Function); // true
  * ```
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
-export default function isFunction(value: unknown): value is Function {
-    return getConstructor(value) === Function;
+export default function isFunction(value: unknown): value is UnknownFunction {
+    return typeof value === 'function';
 }

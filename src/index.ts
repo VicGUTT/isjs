@@ -4,6 +4,7 @@ import { SubType, SuperType, Type } from './types';
  * Type checks
  */
 import isArray from './isArray';
+import isAsyncFunction from './isAsyncFunction';
 import isBigInt from './isBigInt';
 import isBool from './isBool';
 import isBoolean from './isBoolean';
@@ -38,6 +39,7 @@ import isSet from './isSet';
 import isSizey from './isSizey';
 import isString from './isString';
 import isSymbol from './isSymbol';
+import isSyncFunction from './isSyncFunction';
 import isTextNode from './isTextNode';
 import isTruthy from './isTruthy';
 import isUndefined from './isUndefined';
@@ -71,6 +73,7 @@ import VERSION from './constants/VERSION';
  */
 export default {
     array: isArray,
+    asyncFunction: isAsyncFunction,
     bigInt: isBigInt,
     blank: isBlank,
     bool: isBool,
@@ -110,6 +113,7 @@ export default {
     sizey: isSizey,
     string: isString,
     symbol: isSymbol,
+    syncFunction: isSyncFunction,
     textNode: isTextNode,
     truthy: isTruthy,
     typedAs: isTypedAs,

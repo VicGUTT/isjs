@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor
+
 export const nil = [null, undefined];
 
 export const booleans = [true, false];
@@ -106,6 +109,12 @@ export const functions = [
 
     Function('hey'),
     new Function('hey'),
+
+    async (): Promise<void> => {}, // eslint-disable-line @typescript-eslint/no-empty-function
+    async function(): Promise<void> {}, // eslint-disable-line @typescript-eslint/no-empty-function
+
+    AsyncFunction(),
+    new AsyncFunction(),
 ];
 
 export const classes = [
@@ -140,6 +149,7 @@ export const constructors = [
     WeakSet,
     Date,
     Promise,
+    AsyncFunction,
 ];
 
 export const invokedConstructors = [
@@ -177,7 +187,6 @@ export const instances = [
     ...classes.map((item) => new item()),
     ...constructors.map((item) => {
         try {
-            // @ts-expect-error yolo
             return new item();
         } catch (error) {
             return null;

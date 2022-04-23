@@ -1,4 +1,4 @@
-import { Truthy } from './types';
+import type { Truthy } from './types';
 
 /**
  * Determines whether the given value is "truthy".

@@ -1,4 +1,4 @@
-import { SubType, SuperType, Type } from '../types';
+import type { SubType, SuperType, Type } from '../types';
 
 export const SUPER_TYPES: SuperType[] = ['nil', 'number', 'derivative', 'primitive'];
 

@@ -1,4 +1,4 @@
-import { Lengthy } from './types';
+import type { Lengthy } from './types';
 
 /**
  * Determines whether the given value is "lengthy".

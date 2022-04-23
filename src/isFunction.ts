@@ -1,4 +1,4 @@
-import { UnknownFunction } from './types';
+import type { UnknownFunction } from './types';
 
 /**
  * Determines whether the given value is a function.

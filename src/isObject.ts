@@ -1,4 +1,4 @@
-import { UnknownObject } from './types';
+import type { UnknownObject } from './types';
 
 /**
  * Determines whether the given value is an "object literal".

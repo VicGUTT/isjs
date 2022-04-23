@@ -4,9 +4,9 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import type { UnknownObject } from '../../src/types';
 import values from '../__Fixtures/values';
 import isNumeric from '../../src/isNumeric';
-import { UnknownObject } from '../../src/types';
 
 const KEY = 'numerics';
 

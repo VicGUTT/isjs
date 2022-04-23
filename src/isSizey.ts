@@ -1,4 +1,4 @@
-import { Sizey } from './types';
+import type { Sizey } from './types';
 
 /**
  * Determines whether the given value is "sizey".

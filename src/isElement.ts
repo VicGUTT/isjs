@@ -1,4 +1,4 @@
-import { UnknownConstructor } from './types';
+import type { UnknownConstructor } from './types';
 import instanceOf from './utils/instanceOf';
 
 /**

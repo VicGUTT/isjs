@@ -1,4 +1,4 @@
-import { UnknownObject } from './types';
+import type { UnknownObject } from './types';
 import instanceOf from './utils/instanceOf';
 
 /**

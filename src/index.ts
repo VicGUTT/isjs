@@ -1,4 +1,4 @@
-import { SubType, SuperType, Type } from './types';
+import type { SubType, SuperType, Type } from './types';
 
 /**
  * Type checks

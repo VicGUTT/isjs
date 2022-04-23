@@ -1,4 +1,4 @@
-import { UnknownConstructor } from '../../src/types';
+import type { UnknownConstructor } from '../../src/types';
 import instanceOf from '../../src/utils/instanceOf';
 
 describe('utils:instanceOf', () => {

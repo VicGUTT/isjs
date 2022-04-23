@@ -1,4 +1,4 @@
-import { Falsy } from './types';
+import type { Falsy } from './types';
 
 /**
  * Determines whether the given value is "falsy".

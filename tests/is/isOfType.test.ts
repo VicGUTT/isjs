@@ -4,7 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
-import { Type } from '../../src/types';
+import type { Type } from '../../src/types';
 import values from '../__Fixtures/values';
 import isOfType from '../../src/isOfType';
 import isInt from '../../src/isInt';

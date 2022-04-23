@@ -1,3 +1,4 @@
+import type { Type } from './types';
 import isBool from './isBool';
 import isDerivative from './isDerivative';
 import isNil from './isNil';
@@ -15,7 +16,6 @@ import isBigInt from './isBigInt';
 import isArray from './isArray';
 import isObject from './isObject';
 import isFunction from './isFunction';
-import { Type } from './types';
 
 /**
  * Determines whether the given value is of the given type or

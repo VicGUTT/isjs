@@ -1,4 +1,4 @@
-import { Blank } from './types';
+import type { Blank } from './types';
 import isEmpty from './isEmpty';
 import isString from './isString';
 import isNumeric from './isNumeric';

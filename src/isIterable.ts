@@ -1,4 +1,4 @@
-import { Iterable } from './types';
+import type { Iterable } from './types';
 
 /**
  * Determines whether the given value is an "iterable".

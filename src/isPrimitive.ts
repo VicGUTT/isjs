@@ -1,4 +1,4 @@
-import { Primitive } from './types';
+import type { Primitive } from './types';
 import isBigInt from './isBigInt';
 import isNull from './isNull';
 import isSymbol from './isSymbol';

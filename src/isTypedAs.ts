@@ -1,4 +1,4 @@
-import { TypedAs } from './types';
+import type { TypedAs } from './types';
 import isNil from './isNil';
 import isBoolean from './isBoolean';
 import isString from './isString';

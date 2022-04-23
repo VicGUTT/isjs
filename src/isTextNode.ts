@@ -1,4 +1,4 @@
-import { ConstructorLike } from './types';
+import type { ConstructorLike } from './types';
 import getConstructor from './utils/getConstructor';
 
 /**

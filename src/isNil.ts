@@ -1,4 +1,4 @@
-import { Nil } from './types';
+import type { Nil } from './types';
 import isNullOrUndefined from './isNullOrUndefined';
 
 /**

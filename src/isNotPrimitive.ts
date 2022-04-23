@@ -1,4 +1,4 @@
-import { Derivative } from './types';
+import type { Derivative } from './types';
 import isPrimitive from './isPrimitive';
 
 /**

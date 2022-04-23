@@ -1,4 +1,4 @@
-import { Filled } from './types';
+import type { Filled } from './types';
 import isBlank from './isBlank';
 
 /**

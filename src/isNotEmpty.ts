@@ -1,4 +1,4 @@
-import { NotEmpty } from './types';
+import type { NotEmpty } from './types';
 import isEmpty from './isEmpty';
 
 /**

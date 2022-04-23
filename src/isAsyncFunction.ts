@@ -1,4 +1,4 @@
-import { UnknownAsyncFunction } from './types';
+import type { UnknownAsyncFunction } from './types';
 import getConstructor from './utils/getConstructor';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function

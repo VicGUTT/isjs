@@ -1,4 +1,4 @@
-import { Empty } from './types';
+import type { Empty } from './types';
 import isFunction from './isFunction';
 import isObject from './isObject';
 import isLengthy from './isLengthy';

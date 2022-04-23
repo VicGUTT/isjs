@@ -1,4 +1,4 @@
-import { Numeric } from './types';
+import type { Numeric } from './types';
 import isBigInt from './isBigInt';
 import isSymbol from './isSymbol';
 

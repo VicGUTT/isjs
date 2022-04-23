@@ -1,4 +1,4 @@
-import { Defined } from './types';
+import type { Defined } from './types';
 import isUndefined from './isUndefined';
 
 /**

@@ -20,5 +20,6 @@ import instanceOf from './utils/instanceOf';
  * ```
  */
 export default function isElement(value: unknown): value is Element {
+    // Alternative: node.nodeType === Node.ELEMENT_NODE
     return instanceOf(value, Element as unknown as UnknownConstructor);
 }

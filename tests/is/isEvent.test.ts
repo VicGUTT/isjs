@@ -76,6 +76,12 @@ describe('is:isEvent', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isEvent(value)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isEvent(value)).toEqual(false);

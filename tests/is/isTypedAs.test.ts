@@ -99,6 +99,12 @@ describe('is:isTypedAs', () => {
         });
     });
 
+    it(`✅ DOM alternative are of type -> derivative`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isTypedAs(value)).toEqual('derivative');
+        });
+    });
+
     it(`✅ functions are of type -> function`, () => {
         values.functions.forEach((value) => {
             expect(isTypedAs(value)).toEqual('function');

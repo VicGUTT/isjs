@@ -184,6 +184,12 @@ describe('is:isBlank', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isBlank(value)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isBlank(value)).toEqual(false);

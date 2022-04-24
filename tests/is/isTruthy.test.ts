@@ -76,6 +76,12 @@ describe('is:isTruthy', () => {
         });
     });
 
+    it(`✅ DOM alternative contexts === ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isTruthy(value)).toEqual(true);
+        });
+    });
+
     it(`✅ functions === ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isTruthy(value)).toEqual(true);

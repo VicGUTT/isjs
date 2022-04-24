@@ -109,6 +109,12 @@ describe('is:isNumeric', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isNumeric(value)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isNumeric(value)).toEqual(false);

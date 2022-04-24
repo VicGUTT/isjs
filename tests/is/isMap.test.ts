@@ -76,6 +76,12 @@ describe('is:isMap', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isMap(value)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isMap(value)).toEqual(false);

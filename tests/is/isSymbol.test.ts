@@ -76,6 +76,12 @@ describe('is:isSymbol', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isSymbol(value)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isSymbol(value)).toEqual(false);

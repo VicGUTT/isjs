@@ -87,6 +87,13 @@ describe('is:isString', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isString(value)).toEqual(false);
+            expect(isString(value, true)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isString(value)).toEqual(false);

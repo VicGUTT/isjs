@@ -87,6 +87,13 @@ describe('is:isBoolean', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isBoolean(value)).toEqual(false);
+            expect(isBoolean(value, true)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isBoolean(value)).toEqual(false);

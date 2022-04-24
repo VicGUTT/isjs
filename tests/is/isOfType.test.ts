@@ -162,6 +162,12 @@ describe('is:isOfType', () => {
         });
     });
 
+    it(`✅ DOM alternative contexts are of type -> derivative`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isOfType(value, 'derivative')).toEqual(true);
+        });
+    });
+
     it(`✅ functions are of type -> function`, () => {
         values.functions.forEach((value) => {
             expect(isOfType(value, 'function')).toEqual(true);

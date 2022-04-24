@@ -76,6 +76,12 @@ describe('is:isNullOrUndefined', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isNullOrUndefined(value)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isNullOrUndefined(value)).toEqual(false);

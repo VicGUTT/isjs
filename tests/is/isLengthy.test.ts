@@ -76,6 +76,12 @@ describe('is:isLengthy', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isLengthy(value)).toEqual(false);
+        });
+    });
+
     it(`✅ functions === ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isLengthy(value)).toEqual(true);

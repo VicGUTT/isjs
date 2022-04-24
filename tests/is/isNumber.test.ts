@@ -128,6 +128,13 @@ describe('is:isNumber', () => {
         });
     });
 
+    it(`❌ DOM alternative contexts !== ${KEY}`, () => {
+        values.alternativeDOMs.forEach((value) => {
+            expect(isNumber(value)).toEqual(false);
+            expect(isNumber(value, true)).toEqual(false);
+        });
+    });
+
     it(`❌ functions !== ${KEY}`, () => {
         values.functions.forEach((value) => {
             expect(isNumber(value)).toEqual(false);

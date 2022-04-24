@@ -91,6 +91,11 @@ export const nodeLists = [
     document.querySelectorAll('div'), // length = 3
 ];
 
+export const alternativeDOMs = [
+    document.createDocumentFragment(),
+    document.createElement('span').attachShadow({ mode: 'open' }),
+];
+
 export const functions = [
     (): void => {}, // eslint-disable-line @typescript-eslint/no-empty-function
     function(): void {}, // eslint-disable-line @typescript-eslint/no-empty-function
@@ -240,6 +245,7 @@ export const all = [
     ...arrays,
     ...elements,
     ...nodeLists,
+    ...alternativeDOMs,
     ...functions,
     ...classes,
     ...constructors,
@@ -260,6 +266,7 @@ export default {
     arrays,
     elements,
     nodeLists,
+    alternativeDOMs,
     functions,
     classes,
     constructors,

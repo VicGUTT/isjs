@@ -12,6 +12,7 @@ import isClass from './isClass';
 import isDate from './isDate';
 import isDefined from './isDefined';
 import isDerivative from './isDerivative';
+import isDocumentFragment from './isDocumentFragment';
 import isElement from './isElement';
 import isEvent from './isEvent';
 import isFalsy from './isFalsy';
@@ -36,6 +37,7 @@ import isObject from './isObject';
 import isPrimitive from './isPrimitive';
 import isPromise from './isPromise';
 import isSet from './isSet';
+import isShadowRoot from './isShadowRoot';
 import isSizey from './isSizey';
 import isString from './isString';
 import isSymbol from './isSymbol';
@@ -82,6 +84,7 @@ export default {
     date: isDate,
     defined: isDefined,
     derivative: isDerivative,
+    documentFragment: isDocumentFragment,
     element: isElement,
     empty: isEmpty,
     event: isEvent,
@@ -110,6 +113,7 @@ export default {
     primitive: isPrimitive,
     promise: isPromise,
     set: isSet,
+    shadowRoot: isShadowRoot,
     sizey: isSizey,
     string: isString,
     symbol: isSymbol,

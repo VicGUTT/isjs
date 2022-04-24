@@ -298,6 +298,22 @@ isDerivative([]); // true
 isDerivative({}); // true
 ```
 
+### • **is.documentFragment / isDocumentFragment** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isDocumentFragment.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isDocumentFragment.test.ts))_
+
+Determines whether the given value is a DocumentFragment.
+
+```js
+isDocumentFragment({}); // false
+isDocumentFragment(Document); // false
+isDocumentFragment(Window); // false
+isDocumentFragment(document.getRootNode()); // false
+isDocumentFragment(document.body); // false
+isDocumentFragment(document.querySelector('html')); // false
+isDocumentFragment(document.createElement('img')); // false
+isDocumentFragment(new DocumentFragment()); // true
+isDocumentFragment(document.createDocumentFragment()); // true
+```
+
 ### • **is.element / isElement** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isElement.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isElement.test.ts))_
 
 Determines whether the given value is an Element.
@@ -799,6 +815,21 @@ Determines whether the given value is a Set.
 ```js
 isSet([]); // false
 isSet(new Set()); // true
+```
+
+### • **is.shadowRoot / isShadowRoot** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isShadowRoot.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isShadowRoot.test.ts))_
+
+Determines whether the given value is a ShadowRoot.
+
+```js
+isShadowRoot({}); // false
+isShadowRoot(Document); // false
+isShadowRoot(Window); // false
+isShadowRoot(document.getRootNode()); // false
+isShadowRoot(document.body); // false
+isShadowRoot(document.querySelector('html')); // false
+isShadowRoot(document.createElement('img')); // false
+isShadowRoot(document.createElement('span').attachShadow({ mode: 'open' })); // true
 ```
 
 ### • **is.sizey / isSizey** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isSizey.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isSizey.test.ts))_

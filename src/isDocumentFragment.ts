@@ -1,7 +1,7 @@
 import instanceOf from './utils/instanceOf';
 
 /**
- * Determines whether the given value is a DocumentFragment.
+ * Determines whether the given value is a `DocumentFragment`.
  *
  * @example
  * ```js
@@ -16,6 +16,6 @@ import instanceOf from './utils/instanceOf';
  * isDocumentFragment(document.createDocumentFragment()); // true
  * ```
  */
-export default function isDocumentFragment(value: unknown): value is ShadowRoot {
+export default function isDocumentFragment(value: unknown): value is DocumentFragment {
     return instanceOf(value, DocumentFragment);
 }

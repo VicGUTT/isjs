@@ -300,7 +300,7 @@ isDerivative({}); // true
 
 ### • **is.documentFragment / isDocumentFragment** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isDocumentFragment.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isDocumentFragment.test.ts))_
 
-Determines whether the given value is a DocumentFragment.
+Determines whether the given value is a `DocumentFragment`.
 
 ```js
 isDocumentFragment({}); // false

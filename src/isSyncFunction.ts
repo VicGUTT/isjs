@@ -5,14 +5,14 @@ import getConstructor from './utils/getConstructor';
  *
  * @example
  * ```js
- * isFunction(123); // false
- * isFunction(new class Hello {}); // false
- * isFunction(async function hello() {}); // false
- * isFunction(() => {}); // true
- * isFunction(function() {}); // true
- * isFunction(function hello() {}); // true
- * isFunction(class Hello {}); // true
- * isFunction(new Function); // true
+ * isSyncFunction(123); // false
+ * isSyncFunction(new class Hello {}); // false
+ * isSyncFunction(async function hello() {}); // false
+ * isSyncFunction(() => {}); // true
+ * isSyncFunction(function() {}); // true
+ * isSyncFunction(function hello() {}); // true
+ * isSyncFunction(class Hello {}); // true
+ * isSyncFunction(new Function); // true
  * ```
  */
 // eslint-disable-next-line @typescript-eslint/ban-types

@@ -1,8 +1,8 @@
-import type { UnknownAsyncFunction } from './types';
+import type { AsyncFunction } from './types';
 import getConstructor from './utils/getConstructor';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-const AsyncFunction = getConstructor(async () => {});
+const AsyncFunctionConstructor = getConstructor(async () => {});
 
 /**
  * Determines whether the given value is an async function.
@@ -16,9 +16,9 @@ const AsyncFunction = getConstructor(async () => {});
  * isAsyncFunction(function hello() {}); // false
  * isAsyncFunction(class Hello {}); // false
  * isAsyncFunction(new Function); // false
- * isFunction(async function hello() {}); // true
+ * isAsyncFunction(async function hello() {}); // true
  * ```
  */
-export default function isAsyncFunction(value: unknown): value is UnknownAsyncFunction {
-    return getConstructor(value) === AsyncFunction;
+export default function isAsyncFunction(value: unknown): value is AsyncFunction {
+    return getConstructor(value) === AsyncFunctionConstructor;
 }

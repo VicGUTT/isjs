@@ -10,7 +10,7 @@ import isAsyncFunction from '../../src/isAsyncFunction';
 const KEY = 'asyncFunctions';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;
+const AsyncFunctionConstructor = Object.getPrototypeOf(async () => {}).constructor;
 
 describe('is:isAsyncFunction', () => {
     it(`❌ nil !== ${KEY}`, () => {
@@ -87,7 +87,7 @@ describe('is:isAsyncFunction', () => {
 
     it(`➖ functions !== || === ${KEY}`, () => {
         values.functions.forEach((value) => {
-            expect(isAsyncFunction(value)).toEqual(value.constructor === AsyncFunction);
+            expect(isAsyncFunction(value)).toEqual(value.constructor === AsyncFunctionConstructor);
         });
     });
 

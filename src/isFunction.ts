@@ -1,5 +1,3 @@
-import type { UnknownFunction } from './types';
-
 /**
  * Determines whether the given value is a function.
  *
@@ -15,6 +13,7 @@ import type { UnknownFunction } from './types';
  * isFunction(new Function); // true
  * ```
  */
-export default function isFunction(value: unknown): value is UnknownFunction {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export default function isFunction(value: unknown): value is Function {
     return typeof value === 'function';
 }

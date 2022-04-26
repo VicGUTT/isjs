@@ -148,7 +148,7 @@ isAsyncFunction(function () {}); // false
 isAsyncFunction(function hello() {}); // false
 isAsyncFunction(class Hello {}); // false
 isAsyncFunction(new Function()); // false
-isFunction(async function hello() {}); // true
+isAsyncFunction(async function hello() {}); // true
 ```
 
 ### • **is.bigInt / isBigInt** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isBigInt.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isBigInt.test.ts))_
@@ -453,21 +453,6 @@ Determines whether the given value is a FormData object.
 ```js
 isFormData({}); // false
 isFormData(new FormData()); // true
-```
-
-### • **is.function / isFunction** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isFunction.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isFunction.test.ts))_
-
-Determines whether the given value is a function.
-
-```js
-isFunction(123); // false
-isFunction(new (class Hello {})()); // false
-isFunction(() => {}); // true
-isFunction(function () {}); // true
-isFunction(function hello() {}); // true
-isFunction(async function hello() {}); // true
-isFunction(class Hello {}); // true
-isFunction(new Function()); // true
 ```
 
 ### • **is.infinity / isInfinity** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isInfinity.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isInfinity.test.ts))_
@@ -879,14 +864,14 @@ isSymbol(Symbol(123)); // true
 Determines whether the given value is a sync function.
 
 ```js
-isFunction(123); // false
-isFunction(new (class Hello {})()); // false
-isFunction(async function hello() {}); // false
-isFunction(() => {}); // true
-isFunction(function () {}); // true
-isFunction(function hello() {}); // true
-isFunction(class Hello {}); // true
-isFunction(new Function()); // true
+isSyncFunction(123); // false
+isSyncFunction(new (class Hello {})()); // false
+isSyncFunction(async function hello() {}); // false
+isSyncFunction(() => {}); // true
+isSyncFunction(function () {}); // true
+isSyncFunction(function hello() {}); // true
+isSyncFunction(class Hello {}); // true
+isSyncFunction(new Function()); // true
 ```
 
 ### • **is.textNode / isTextNode** _([Source](https://github.com/VicGUTT/isjs/blob/main/src/isTextNode.ts) | [Tests](https://github.com/VicGUTT/isjs/blob/main/tests/is/isTextNode.test.ts))_

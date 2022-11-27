@@ -118,19 +118,14 @@ async function compileAllTsFiles() {
      * because for some reason it causes the tests to error out.
      */
 
-    ['./dist/_isjs.es.js', './dist/_isjs.umd.cjs'].forEach(path => {
+    ['./dist/_isjs.es.js', './dist/_isjs.umd.cjs'].forEach((path) => {
         if (!fs.existsSync(path)) {
             return;
         }
 
-        consoleMessage(
-            `Replacing \`__APP_VERSION__\` with the app's version (${lib.version}) in \`${path}\`...`
-        );
+        consoleMessage(`Replacing \`__APP_VERSION__\` with the app's version (${lib.version}) in \`${path}\`...`);
 
-        fs.writeFileSync(
-            path,
-            fs.readFileSync(path, 'utf-8').replace('"__APP_VERSION__"', `"${lib.version}"`)
-        );
+        fs.writeFileSync(path, fs.readFileSync(path, 'utf-8').replace('"__APP_VERSION__"', `"${lib.version}"`));
     });
 }
 

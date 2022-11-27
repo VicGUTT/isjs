@@ -119,11 +119,11 @@
         },
         {
             "path": "dist/_isjs.umd.cjs",
-            "limit": "1.5 KB"
+            "limit": "1.57 KB"
         },
         {
             "path": "dist/**/*.js",
-            "limit": "15 KB"
+            "limit": "11 KB"
         }
     ],
     "np": {

@@ -15,6 +15,9 @@ export default defineConfig({
     define: {
         __APP_VERSION__: lib.version,
     },
+    esbuild: {
+        minify: true,
+    },
     build: {
         /**
          * @see https://vitejs.dev/config/#build-target
@@ -26,8 +29,7 @@ export default defineConfig({
          */
         chunkSizeWarningLimit: 10, // 10 kbs
 
-        // manifest: true,
-        // minify: false,
+        minify: 'terser',
 
         /**
          * @see https://vitejs.dev/config/#build-rollupoptions

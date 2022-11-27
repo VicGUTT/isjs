@@ -4,11 +4,12 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isUndefined from '../../src/isUndefined';
 import isDefined from '../../src/isDefined';
 
-describe('is:isDefined', () => {
+describe('is/isDefined', () => {
     Object.entries(values).forEach(([key, items]) => {
         test(`isDefined() === !isUndefined() | [${key}]`, () => {
             items.forEach((value) => {

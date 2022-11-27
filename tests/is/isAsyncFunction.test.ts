@@ -4,6 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isAsyncFunction from '../../src/isAsyncFunction';
 
@@ -12,7 +13,7 @@ const KEY = 'asyncFunctions';
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const AsyncFunctionConstructor = Object.getPrototypeOf(async () => {}).constructor;
 
-describe('is:isAsyncFunction', () => {
+describe('is/isAsyncFunction', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isAsyncFunction(value)).toEqual(false);

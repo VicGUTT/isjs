@@ -4,11 +4,12 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isInteger from '../../src/isInteger';
 import isInt from '../../src/isInt';
 
-describe('is:isInt', () => {
+describe('is/isInt', () => {
     Object.entries(values).forEach(([key, items]) => {
         test(`isInt() === isInteger() | [${key}]`, () => {
             items.forEach((value) => {

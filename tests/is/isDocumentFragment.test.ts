@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isDocumentFragment from '../../src/isDocumentFragment';
 
 const KEY = 'documentFragments';
 
-describe('is:isDocumentFragment', () => {
+describe('is/isDocumentFragment', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isDocumentFragment(value)).toEqual(false);

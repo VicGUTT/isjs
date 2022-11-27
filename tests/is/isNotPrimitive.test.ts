@@ -4,11 +4,12 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isPrimitive from '../../src/isPrimitive';
 import isNotPrimitive from '../../src/isNotPrimitive';
 
-describe('is:isNotPrimitive', () => {
+describe('is/isNotPrimitive', () => {
     Object.entries(values).forEach(([key, items]) => {
         test(`isNotPrimitive() === !isPrimitive() | [${key}]`, () => {
             items.forEach((value) => {

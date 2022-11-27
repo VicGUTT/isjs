@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isNullOrUndefined from '../../src/isNullOrUndefined';
 
 const KEY = 'nullOrUndefined';
 
-describe('is:isNullOrUndefined', () => {
+describe('is/isNullOrUndefined', () => {
     it(`✅ nil === ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isNullOrUndefined(value)).toEqual(true);

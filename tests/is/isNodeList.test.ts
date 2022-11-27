@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isNodeList from '../../src/isNodeList';
 
 const KEY = 'nodeList';
 
-describe('is:isNodeList', () => {
+describe('is/isNodeList', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isNodeList(value)).toEqual(false);

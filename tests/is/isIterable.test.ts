@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isIterable from '../../src/isIterable';
 
 const KEY = 'iterables';
 
-describe('is:isIterable', () => {
+describe('is/isIterable', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isIterable(value)).toEqual(false);
@@ -102,7 +103,6 @@ describe('is:isIterable', () => {
 
     it(`➖ invoked object constructors !== || === ${KEY}`, () => {
         values.invokedConstructors.forEach((value) => {
-            // @ts-expect-error yolo
             expect(isIterable(value)).toEqual(!!value?.[Symbol.iterator]?.());
         });
     });

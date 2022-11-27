@@ -4,6 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isInteger from '../../src/isInteger';
 
@@ -25,7 +26,7 @@ const _isInteger = (value: unknown): boolean => {
     return Number.isInteger(value) && !(value + '').includes('.');
 };
 
-describe('is:isInteger', () => {
+describe('is/isInteger', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isInteger(value)).toEqual(false);

@@ -1,7 +1,8 @@
-import type { UnknownConstructor } from '../../src/types';
+import { type UnknownConstructor } from '../../src/types';
+import { describe, it, expect } from 'vitest';
 import instanceOf from '../../src/utils/instanceOf';
 
-describe('utils:instanceOf', () => {
+describe('utils/instanceOf', () => {
     it('works', () => {
         // @ts-expect-error Yeah yeah...
         expect(instanceOf(null, null)).toEqual(false);

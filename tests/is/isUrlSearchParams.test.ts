@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isUrlSearchParams from '../../src/isUrlSearchParams';
 
 const KEY = 'urlSearchParams';
 
-describe('is:isUrlSearchParams', () => {
+describe('is/isUrlSearchParams', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isUrlSearchParams(value)).toEqual(false);

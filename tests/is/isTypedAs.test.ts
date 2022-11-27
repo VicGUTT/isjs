@@ -4,6 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isTypedAs from '../../src/isTypedAs';
 import isPrimitive from '../../src/isPrimitive';
@@ -14,7 +15,7 @@ import isFunction from '../../src/isFunction';
 
 // const KEY = 'typedAs';
 
-describe('is:isTypedAs', () => {
+describe('is/isTypedAs', () => {
     it(`✅ nil is of type -> nil`, () => {
         values.nil.forEach((value) => {
             expect(isTypedAs(value)).toEqual('nil');

@@ -4,11 +4,12 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isBoolean from '../../src/isBoolean';
 import isBool from '../../src/isBool';
 
-describe('is:isBool', () => {
+describe('is/isBool', () => {
     Object.entries(values).forEach(([key, items]) => {
         test(`isBool() === isBoolean() | [${key}]`, () => {
             items.forEach((value) => {

@@ -5,6 +5,7 @@
  */
 
 import type { UnknownObject } from '../../src/types';
+import { describe, it, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isNumeric from '../../src/isNumeric';
 
@@ -34,7 +35,7 @@ const _isNumeric = (value: unknown): boolean => {
     return (value as UnknownObject)?.constructor === Number && value !== Infinity;
 };
 
-describe('is:isNumeric', () => {
+describe('is/isNumeric', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isNumeric(value)).toEqual(false);

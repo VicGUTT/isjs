@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isWeakMap from '../../src/isWeakMap';
 
 const KEY = 'weakMaps';
 
-describe('is:isWeakMap', () => {
+describe('is/isWeakMap', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isWeakMap(value)).toEqual(false);

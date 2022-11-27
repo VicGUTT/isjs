@@ -4,6 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isPrimitive from '../../src/isPrimitive';
 
@@ -32,7 +33,7 @@ const rejectPrimitives = (items: unknown[]): unknown[] => {
     return items.filter((item) => !_isPrimitive(item));
 };
 
-describe('is:isPrimitive', () => {
+describe('is/isPrimitive', () => {
     it(`✅ nil === ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isPrimitive(value)).toEqual(true);

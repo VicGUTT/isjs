@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isFormData from '../../src/isFormData';
 
 const KEY = 'formData';
 
-describe('is:isFormData', () => {
+describe('is/isFormData', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isFormData(value)).toEqual(false);

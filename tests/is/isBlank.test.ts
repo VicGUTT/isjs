@@ -4,6 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isBlank from '../../src/isBlank';
 import isObject from '../../src/isObject';
@@ -77,7 +78,7 @@ const rejectBlanks = (items: unknown[]): unknown[] => {
     return items.filter((item) => !_isBlank(item));
 };
 
-describe('is:isBlank', () => {
+describe('is/isBlank', () => {
     it(`✅ nil === ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isBlank(value)).toEqual(true);

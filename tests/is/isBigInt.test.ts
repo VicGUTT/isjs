@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isBigInt from '../../src/isBigInt';
 
 const KEY = 'bigInts';
 
-describe('is:isBigInt', () => {
+describe('is/isBigInt', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isBigInt(value)).toEqual(false);

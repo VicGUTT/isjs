@@ -5,6 +5,7 @@
  */
 
 import type { Type } from '../../src/types';
+import { describe, it, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isOfType from '../../src/isOfType';
 import isInt from '../../src/isInt';
@@ -73,7 +74,7 @@ const randomTypes = (): Type[] => {
     return shuffleArray(TYPES).slice(0, rand(TYPES.length));
 };
 
-describe('is:isOfType', () => {
+describe('is/isOfType', () => {
     it(`✅ nil is of type -> nil`, () => {
         values.nil.forEach((value) => {
             expect(isOfType(value, 'nil')).toEqual(true);

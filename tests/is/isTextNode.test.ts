@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isTextNode from '../../src/isTextNode';
 
 const KEY = 'symbols';
 
-describe('is:isTextNode', () => {
+describe('is/isTextNode', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isTextNode(value)).toEqual(false);

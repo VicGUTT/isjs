@@ -4,6 +4,7 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isFloat from '../../src/isFloat';
 
@@ -25,7 +26,7 @@ const _isFloat = (value: unknown): boolean => {
     return !Number.isInteger(value) && (value + '').includes('.');
 };
 
-describe('is:isFloat', () => {
+describe('is/isFloat', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isFloat(value)).toEqual(false);

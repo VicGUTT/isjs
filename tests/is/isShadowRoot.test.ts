@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isShadowRoot from '../../src/isShadowRoot';
 
 const KEY = 'shadowRoots';
 
-describe('is:isShadowRoot', () => {
+describe('is/isShadowRoot', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isShadowRoot(value)).toEqual(false);

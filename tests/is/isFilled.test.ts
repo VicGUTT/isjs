@@ -4,11 +4,12 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, test, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isBlank from '../../src/isBlank';
 import isFilled from '../../src/isFilled';
 
-describe('is:isFilled', () => {
+describe('is/isFilled', () => {
     Object.entries(values).forEach(([key, items]) => {
         test(`isFilled() === !isBlank() | [${key}]`, () => {
             items.forEach((value) => {

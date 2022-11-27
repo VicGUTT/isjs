@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isInfinity from '../../src/isInfinity';
 
 const KEY = 'infinity';
 
-describe('is:isInfinity', () => {
+describe('is/isInfinity', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isInfinity(value)).toEqual(false);

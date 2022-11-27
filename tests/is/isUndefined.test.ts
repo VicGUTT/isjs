@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isUndefined from '../../src/isUndefined';
 
 const KEY = 'undefined';
 
-describe('is:isUndefined', () => {
+describe('is/isUndefined', () => {
     it(`✅ undefined === ${KEY}`, () => {
         expect(isUndefined(undefined)).toEqual(true);
     });

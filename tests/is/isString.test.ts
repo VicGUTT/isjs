@@ -4,12 +4,13 @@
  * ➖: The expectation can be equal to true or false
  */
 
+import { describe, it, expect } from 'vitest';
 import values from '../__Fixtures/values';
 import isString from '../../src/isString';
 
 const KEY = 'strings';
 
-describe('is:isString', () => {
+describe('is/isString', () => {
     it(`❌ nil !== ${KEY}`, () => {
         values.nil.forEach((value) => {
             expect(isString(value)).toEqual(false);

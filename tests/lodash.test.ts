@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest';
 import values from './__Fixtures/values';
 import lodash from './__utils/lodash';
 import is from '../src';

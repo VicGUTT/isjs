@@ -78,5 +78,7 @@ export default function isTypedAs(value: unknown): TypedAs {
     /**
      * We should never get here.
      */
+    /* c8 ignore start */
     throw IsBaseException.unknown();
+    /* c8 ignore end */
 }

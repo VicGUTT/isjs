@@ -14,7 +14,6 @@ import type { Sizey } from './types';
  * isSizey({size: 0}); // true
  * ```
  */
-
 export default function isSizey<T>(value: unknown): value is Sizey<T> {
     try {
         // @ts-expect-error C'mon, it's in a try/catch block

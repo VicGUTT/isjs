@@ -60,9 +60,9 @@ export type Numeric = number | string;
 export type UnknownObject = Record<string | number | symbol, unknown>;
 export type Primitive = null | undefined | boolean | number | string | symbol | bigint;
 export type Derivative<T> = Exclude<T, Primitive>;
-export type Lengthy<T extends {} = {}> = T & { length: number };
-export type Sizey<T extends {} = {}> = T & { size: number };
-export type Iterable<T extends {} = {}> = T & { [Symbol.iterator]: Object };
+export type Lengthy<T = unknown> = T & { length: number };
+export type Sizey<T = unknown> = T & { size: number };
+export type Iterable<T = unknown> = T & { [Symbol.iterator]: Object };
 
 export interface AsyncFunction extends Function {
     new (...args: string[]): Promise<any>;
@@ -75,10 +75,10 @@ export interface AsyncFunction extends Function {
  *--------------------------------------------------------------------------
  */
 
-export type UnknownConstructor<T extends {} = {}> = new (...args: any[]) => T;
-export type UnknownConstructorFunction<T extends {} = {}> = (...args: any[]) => T;
+export type UnknownConstructor<T = unknown> = new (...args: any[]) => T;
+export type UnknownConstructorFunction<T = unknown> = (...args: any[]) => T;
 export type ConstructorLike<T = unknown> = { readonly prototype: T };
-export type Constructor<T extends {} = {}> = ConstructorLike & (UnknownConstructor<T> | UnknownConstructorFunction<T>);
+export type Constructor<T = unknown> = ConstructorLike & (UnknownConstructor<T> | UnknownConstructorFunction<T>);
 
 // Alterative ?
 // - export type Constructor<T = object, A extends any[] = any[], Static = {}> = (new (...a: A) => T) & Static (https://github.com/trusktr/lowclass/blob/b5c526aa800e64cd20443a95faf2bf0dc31aec41/src/utils.ts#L129)

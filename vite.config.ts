@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import jsdoc2md from 'jsdoc-to-markdown';
-import { exec } from 'child_process';
+import { exec, type ExecException } from 'child_process';
 import { defineConfig } from 'vite';
 
 const lib = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
@@ -11,12 +11,12 @@ const libName = lib.name.split('/')[1] ?? lib.name;
 const year = new Date().getFullYear();
 
 export default defineConfig({
-    /**
-     * @see https://vitejs.dev/config/shared-options.html#define
-     */
-    define: {
-        __APP_VERSION__: lib.version,
-    },
+    // /**
+    //  * @see https://vitejs.dev/config/shared-options.html#define
+    //  */
+    // define: {
+    //     __APP_VERSION__: lib.version,
+    // },
     build: {
         /**
          * @see https://vitejs.dev/config/#build-target
@@ -72,6 +72,7 @@ export default defineConfig({
         coverage: {
             reportsDirectory: '.coverage',
             include: ['src/**/*.{ts,js}'],
+            exclude: ['src/Exceptions/**/*.{ts,js}'],
             // Threshold
             statements: 90,
             branches: 90,
@@ -111,6 +112,26 @@ async function compileAllTsFiles() {
             fs.readFileSync(paths.VERSION, 'utf-8').replace("'__APP_VERSION__'", `'${lib.version}'`)
         );
     }
+
+    /**
+     * Fallback for: https://vitejs.dev/config/shared-options.html#define,
+     * because for some reason it causes the tests to error out.
+     */
+
+    ['./dist/_isjs.es.js', './dist/_isjs.umd.cjs'].forEach(path => {
+        if (!fs.existsSync(path)) {
+            return;
+        }
+
+        consoleMessage(
+            `Replacing \`__APP_VERSION__\` with the app's version (${lib.version}) in \`${path}\`...`
+        );
+
+        fs.writeFileSync(
+            path,
+            fs.readFileSync(path, 'utf-8').replace('"__APP_VERSION__"', `"${lib.version}"`)
+        );
+    });
 }
 
 async function generateReadme() {
@@ -187,11 +208,14 @@ async function generateReadme() {
 /* Helpers
 ------------------------------------------------*/
 
-async function execAsync(command, callback) {
+async function execAsync(
+    command: string,
+    callback?: (error: ExecException | null, stdout: string, stderr: string) => void
+) {
     return await new Promise((resolve, reject) => {
         exec(command, (error, stdout, stderr) => {
             try {
-                return error ? reject(error, stdout, stderr) : resolve(callback && callback(error, stdout, stderr));
+                return error ? reject({ error, stdout, stderr }) : resolve(callback && callback(error, stdout, stderr));
             } catch (e) {
                 return reject(e);
             }
@@ -199,9 +223,8 @@ async function execAsync(command, callback) {
     });
 }
 
-function consoleMessage(message) {
+function consoleMessage(message: string): void {
     process.stdout.write('\n');
 
     console.log(message);
 }
-

@@ -5,9 +5,9 @@
  */
 
 import { describe, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isEmpty from '../../src/isEmpty';
-import isNotEmpty from '../../src/isNotEmpty';
+import values from '../__Fixtures/values.js';
+import isEmpty from '../../src/isEmpty.js';
+import isNotEmpty from '../../src/isNotEmpty.js';
 
 describe('is/isNotEmpty', () => {
     Object.entries(values).forEach(([key, items]) => {

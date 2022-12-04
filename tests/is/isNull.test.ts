@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isNull from '../../src/isNull';
+import values from '../__Fixtures/values.js';
+import isNull from '../../src/isNull.js';
 
 const KEY = 'null';
 

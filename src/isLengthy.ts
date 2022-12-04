@@ -1,4 +1,4 @@
-import type { Lengthy } from './types';
+import type { Lengthy } from './types/index.js';
 
 /**
  * Determines whether the given value is "lengthy".

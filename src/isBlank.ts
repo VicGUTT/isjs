@@ -1,9 +1,9 @@
-import type { Blank } from './types';
-import isEmpty from './isEmpty';
-import isString from './isString';
-import isNumeric from './isNumeric';
-import isBoolean from './isBoolean';
-import isBigInt from './isBigInt';
+import type { Blank } from './types/index.js';
+import isEmpty from './isEmpty.js';
+import isString from './isString.js';
+import isNumeric from './isNumeric.js';
+import isBoolean from './isBoolean.js';
+import isBigInt from './isBigInt.js';
 
 /**
  * Determines whether the given value is "blank".

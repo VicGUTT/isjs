@@ -1,4 +1,4 @@
-import type { UnknownObject } from './types';
+import type { UnknownObject } from './types/index.js';
 
 /**
  * Determines whether the given value is an "object literal".

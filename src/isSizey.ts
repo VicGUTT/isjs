@@ -1,4 +1,4 @@
-import type { Sizey } from './types';
+import type { Sizey } from './types/index.js';
 
 /**
  * Determines whether the given value is "sizey".

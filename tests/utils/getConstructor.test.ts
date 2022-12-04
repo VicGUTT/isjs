@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import getConstructor from '../../src/utils/getConstructor';
+import getConstructor from '../../src/utils/getConstructor.js';
 
 describe('utils/getConstructor', () => {
     it('null does not have a constructor', () => {

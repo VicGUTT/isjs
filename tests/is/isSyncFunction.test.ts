@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isSyncFunction from '../../src/isSyncFunction';
+import values from '../__Fixtures/values.js';
+import isSyncFunction from '../../src/isSyncFunction.js';
 
 const KEY = 'syncFunctions';
 

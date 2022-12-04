@@ -1,9 +1,9 @@
-import type { Empty } from './types';
-import isFunction from './isFunction';
-import isObject from './isObject';
-import isLengthy from './isLengthy';
-import isSet from './isSet';
-import isMap from './isMap';
+import type { Empty } from './types/index.js';
+import isFunction from './isFunction.js';
+import isObject from './isObject.js';
+import isLengthy from './isLengthy.js';
+import isSet from './isSet.js';
+import isMap from './isMap.js';
 
 /**
  * Determines whether the given value is "empty".

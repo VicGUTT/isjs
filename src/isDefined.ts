@@ -1,5 +1,5 @@
-import type { Defined } from './types';
-import isUndefined from './isUndefined';
+import type { Defined } from './types/index.js';
+import isUndefined from './isUndefined.js';
 
 /**
  * Determines whether the given value is not `undefined`.

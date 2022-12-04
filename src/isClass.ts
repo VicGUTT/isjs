@@ -1,4 +1,4 @@
-import isFunction from './isFunction';
+import isFunction from './isFunction.js';
 
 /**
  * Determines whether the given value is a class.

@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isIterable from '../../src/isIterable';
+import values from '../__Fixtures/values.js';
+import isIterable from '../../src/isIterable.js';
 
 const KEY = 'iterables';
 

@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isUrlSearchParams from '../../src/isUrlSearchParams';
+import values from '../__Fixtures/values.js';
+import isUrlSearchParams from '../../src/isUrlSearchParams.js';
 
 const KEY = 'urlSearchParams';
 

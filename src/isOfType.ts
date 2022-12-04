@@ -1,21 +1,21 @@
-import type { Type } from './types';
-import isBool from './isBool';
-import isDerivative from './isDerivative';
-import isNil from './isNil';
-import isNull from './isNull';
-import isNumber from './isNumber';
-import isPrimitive from './isPrimitive';
-import isUndefined from './isUndefined';
-import isNan from './isNan';
-import isInfinity from './isInfinity';
-import isInt from './isInt';
-import isFloat from './isFloat';
-import isString from './isString';
-import isSymbol from './isSymbol';
-import isBigInt from './isBigInt';
-import isArray from './isArray';
-import isObject from './isObject';
-import isFunction from './isFunction';
+import type { Type } from './types/index.js';
+import isBool from './isBool.js';
+import isDerivative from './isDerivative.js';
+import isNil from './isNil.js';
+import isNull from './isNull.js';
+import isNumber from './isNumber.js';
+import isPrimitive from './isPrimitive.js';
+import isUndefined from './isUndefined.js';
+import isNan from './isNan.js';
+import isInfinity from './isInfinity.js';
+import isInt from './isInt.js';
+import isFloat from './isFloat.js';
+import isString from './isString.js';
+import isSymbol from './isSymbol.js';
+import isBigInt from './isBigInt.js';
+import isArray from './isArray.js';
+import isObject from './isObject.js';
+import isFunction from './isFunction.js';
 
 /**
  * Determines whether the given value is of the given type or

@@ -1,10 +1,10 @@
-import type { Primitive } from './types';
-import isBigInt from './isBigInt';
-import isNull from './isNull';
-import isSymbol from './isSymbol';
-import isUndefined from './isUndefined';
-import isBoolean from './isBoolean';
-import isString from './isString';
+import type { Primitive } from './types/index.js';
+import isBigInt from './isBigInt.js';
+import isNull from './isNull.js';
+import isSymbol from './isSymbol.js';
+import isUndefined from './isUndefined.js';
+import isBoolean from './isBoolean.js';
+import isString from './isString.js';
 
 /**
  * Determines whether the given value is a "primitive".

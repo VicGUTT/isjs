@@ -1,4 +1,4 @@
-import isBoolean from './isBoolean';
+import isBoolean from './isBoolean.js';
 
 /**
  * Determines whether the given value is a boolean.

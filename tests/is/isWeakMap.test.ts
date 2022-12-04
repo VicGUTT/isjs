@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isWeakMap from '../../src/isWeakMap';
+import values from '../__Fixtures/values.js';
+import isWeakMap from '../../src/isWeakMap.js';
 
 const KEY = 'weakMaps';
 

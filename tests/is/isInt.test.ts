@@ -5,9 +5,9 @@
  */
 
 import { describe, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isInteger from '../../src/isInteger';
-import isInt from '../../src/isInt';
+import values from '../__Fixtures/values.js';
+import isInteger from '../../src/isInteger.js';
+import isInt from '../../src/isInt.js';
 
 describe('is/isInt', () => {
     Object.entries(values).forEach(([key, items]) => {

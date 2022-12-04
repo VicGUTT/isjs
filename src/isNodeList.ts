@@ -1,5 +1,5 @@
-import type { UnknownConstructor } from './types';
-import instanceOf from './utils/instanceOf';
+import type { UnknownConstructor } from './types/index.js';
+import instanceOf from './utils/instanceOf.js';
 
 /**
  * Determines whether the given value is a NodeList.

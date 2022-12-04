@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isFormData from '../../src/isFormData';
+import values from '../__Fixtures/values.js';
+import isFormData from '../../src/isFormData.js';
 
 const KEY = 'formData';
 

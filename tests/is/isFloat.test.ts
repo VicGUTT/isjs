@@ -5,8 +5,8 @@
  */
 
 import { describe, it, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isFloat from '../../src/isFloat';
+import values from '../__Fixtures/values.js';
+import isFloat from '../../src/isFloat.js';
 
 const KEY = 'floats';
 

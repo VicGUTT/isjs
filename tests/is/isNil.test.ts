@@ -5,9 +5,9 @@
  */
 
 import { describe, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isNullOrUndefined from '../../src/isNullOrUndefined';
-import isNil from '../../src/isNil';
+import values from '../__Fixtures/values.js';
+import isNullOrUndefined from '../../src/isNullOrUndefined.js';
+import isNil from '../../src/isNil.js';
 
 describe('is/isNil', () => {
     Object.entries(values).forEach(([key, items]) => {

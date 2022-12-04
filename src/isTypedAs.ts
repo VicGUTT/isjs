@@ -1,18 +1,18 @@
-import type { TypedAs } from './types';
-import isNil from './isNil';
-import isBoolean from './isBoolean';
-import isString from './isString';
-import isSymbol from './isSymbol';
-import isBigInt from './isBigInt';
-import isArray from './isArray';
-import isObject from './isObject';
-import isInt from './isInt';
-import isFloat from './isFloat';
-import isFunction from './isFunction';
-import isNan from './isNan';
-import isInfinity from './isInfinity';
-import isDerivative from './isDerivative';
-import IsBaseException from './Exceptions/IsBaseException';
+import type { TypedAs } from './types/index.js';
+import isNil from './isNil.js';
+import isBoolean from './isBoolean.js';
+import isString from './isString.js';
+import isSymbol from './isSymbol.js';
+import isBigInt from './isBigInt.js';
+import isArray from './isArray.js';
+import isObject from './isObject.js';
+import isInt from './isInt.js';
+import isFloat from './isFloat.js';
+import isFunction from './isFunction.js';
+import isNan from './isNan.js';
+import isInfinity from './isInfinity.js';
+import isDerivative from './isDerivative.js';
+import IsBaseException from './Exceptions/IsBaseException.js';
 
 /**
  * Retrieves a given value's type.

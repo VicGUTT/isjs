@@ -5,9 +5,9 @@
  */
 
 import { describe, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isPrimitive from '../../src/isPrimitive';
-import isNotPrimitive from '../../src/isNotPrimitive';
+import values from '../__Fixtures/values.js';
+import isPrimitive from '../../src/isPrimitive.js';
+import isNotPrimitive from '../../src/isNotPrimitive.js';
 
 describe('is/isNotPrimitive', () => {
     Object.entries(values).forEach(([key, items]) => {

@@ -1,4 +1,4 @@
-import instanceOf from './utils/instanceOf';
+import instanceOf from './utils/instanceOf.js';
 
 /**
  * Determines whether the given value is a ShadowRoot.

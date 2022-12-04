@@ -5,9 +5,9 @@
  */
 
 import { describe, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isNotPrimitive from '../../src/isNotPrimitive';
-import isDerivative from '../../src/isDerivative';
+import values from '../__Fixtures/values.js';
+import isNotPrimitive from '../../src/isNotPrimitive.js';
+import isDerivative from '../../src/isDerivative.js';
 
 describe('is/isDerivative', () => {
     Object.entries(values).forEach(([key, items]) => {

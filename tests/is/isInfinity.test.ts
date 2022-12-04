@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isInfinity from '../../src/isInfinity';
+import values from '../__Fixtures/values.js';
+import isInfinity from '../../src/isInfinity.js';
 
 const KEY = 'infinity';
 

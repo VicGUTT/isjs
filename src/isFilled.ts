@@ -1,5 +1,5 @@
-import type { Filled } from './types';
-import isBlank from './isBlank';
+import type { Filled } from './types/index.js';
+import isBlank from './isBlank.js';
 
 /**
  * Determines whether the given value is "filled".

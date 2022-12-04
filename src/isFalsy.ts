@@ -1,4 +1,4 @@
-import type { Falsy } from './types';
+import type { Falsy } from './types/index.js';
 
 /**
  * Determines whether the given value is "falsy".

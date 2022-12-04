@@ -1,5 +1,5 @@
-import type { Nil } from './types';
-import isNullOrUndefined from './isNullOrUndefined';
+import type { Nil } from './types/index.js';
+import isNullOrUndefined from './isNullOrUndefined.js';
 
 /**
  * Determines whether the given value is `Nil` (`null` or `undefined`).

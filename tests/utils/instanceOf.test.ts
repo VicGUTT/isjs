@@ -1,6 +1,6 @@
-import { type UnknownConstructor } from '../../src/types';
+import { type UnknownConstructor } from '../../src/types/index.js';
 import { describe, it, expect } from 'vitest';
-import instanceOf from '../../src/utils/instanceOf';
+import instanceOf from '../../src/utils/instanceOf.js';
 
 describe('utils/instanceOf', () => {
     it('works', () => {

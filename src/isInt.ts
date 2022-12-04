@@ -1,4 +1,4 @@
-import isInteger from './isInteger';
+import isInteger from './isInteger.js';
 
 /**
  * Determines whether the given value is an integer.

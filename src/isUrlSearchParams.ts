@@ -1,4 +1,4 @@
-import getConstructor from './utils/getConstructor';
+import getConstructor from './utils/getConstructor.js';
 
 /**
  * Determines whether the given value is a URLSearchParams object.

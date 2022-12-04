@@ -1,6 +1,6 @@
-import type { Nil } from './types';
-import isNull from './isNull';
-import isUndefined from './isUndefined';
+import type { Nil } from './types/index.js';
+import isNull from './isNull.js';
+import isUndefined from './isUndefined.js';
 
 /**
  * Determines whether the given value is `null` or `undefined`.

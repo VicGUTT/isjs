@@ -1,6 +1,6 @@
-import type { Numeric } from './types';
-import isBigInt from './isBigInt';
-import isSymbol from './isSymbol';
+import type { Numeric } from './types/index.js';
+import isBigInt from './isBigInt.js';
+import isSymbol from './isSymbol.js';
 
 /**
  * Determines whether the given value is a number or a "numeric string".

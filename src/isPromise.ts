@@ -1,5 +1,5 @@
-import instanceOf from './utils/instanceOf';
-import isFunction from './isFunction';
+import instanceOf from './utils/instanceOf.js';
+import isFunction from './isFunction.js';
 
 /**
  * Determines whether the given value is a Promise.

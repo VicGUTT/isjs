@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
-import values from './__Fixtures/values';
-import lodash from './__utils/lodash';
-import is from '../src';
+import values from './__Fixtures/values.js';
+import lodash from './__utils/lodash.js';
+import is from '../src/index.js';
 
 describe('lodash', () => {
     test(`is.array() === lodash.isArray()`, () => {

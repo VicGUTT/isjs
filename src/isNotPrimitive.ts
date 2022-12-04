@@ -1,5 +1,5 @@
-import type { Derivative } from './types';
-import isPrimitive from './isPrimitive';
+import type { Derivative } from './types/index.js';
+import isPrimitive from './isPrimitive.js';
 
 /**
  * Determines whether the given value is not a "primitive".

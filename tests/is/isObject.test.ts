@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isObject from '../../src/isObject';
+import values from '../__Fixtures/values.js';
+import isObject from '../../src/isObject.js';
 
 const KEY = 'objects';
 

@@ -5,9 +5,9 @@
  */
 
 import { describe, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isBoolean from '../../src/isBoolean';
-import isBool from '../../src/isBool';
+import values from '../__Fixtures/values.js';
+import isBoolean from '../../src/isBoolean.js';
+import isBool from '../../src/isBool.js';
 
 describe('is/isBool', () => {
     Object.entries(values).forEach(([key, items]) => {

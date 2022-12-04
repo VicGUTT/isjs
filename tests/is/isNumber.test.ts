@@ -4,10 +4,10 @@
  * ➖: The expectation can be equal to true or false
  */
 
-import type { UnknownObject } from '../../src/types';
+import type { UnknownObject } from '../../src/types/index.js';
 import { describe, it, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isNumber from '../../src/isNumber';
+import values from '../__Fixtures/values.js';
+import isNumber from '../../src/isNumber.js';
 
 const KEY = 'numbers';
 

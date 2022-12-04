@@ -1,5 +1,5 @@
-import type { NotEmpty } from './types';
-import isEmpty from './isEmpty';
+import type { NotEmpty } from './types/index.js';
+import isEmpty from './isEmpty.js';
 
 /**
  * Determines whether the given value is not "empty".

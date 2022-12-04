@@ -4,19 +4,19 @@
  * ➖: The expectation can be equal to true or false
  */
 
-import type { Type } from '../../src/types';
+import type { Type } from '../../src/types/index.js';
 import { describe, it, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isOfType from '../../src/isOfType';
-import isInt from '../../src/isInt';
-import isPrimitive from '../../src/isPrimitive';
-import isArray from '../../src/isArray';
-import TYPES from '../../src/constants/TYPES';
-import isTypedAs from '../../src/isTypedAs';
-import isNumber from '../../src/isNumber';
-import isNull from '../../src/isNull';
-import isUndefined from '../../src/isUndefined';
-import isDerivative from '../../src/isDerivative';
+import values from '../__Fixtures/values.js';
+import isOfType from '../../src/isOfType.js';
+import isInt from '../../src/isInt.js';
+import isPrimitive from '../../src/isPrimitive.js';
+import isArray from '../../src/isArray.js';
+import TYPES from '../../src/constants/TYPES.js';
+import isTypedAs from '../../src/isTypedAs.js';
+import isNumber from '../../src/isNumber.js';
+import isNull from '../../src/isNull.js';
+import isUndefined from '../../src/isUndefined.js';
+import isDerivative from '../../src/isDerivative.js';
 
 // const KEY = 'ofType';
 

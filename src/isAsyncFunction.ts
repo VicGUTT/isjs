@@ -1,5 +1,5 @@
-import type { AsyncFunction } from './types';
-import getConstructor from './utils/getConstructor';
+import type { AsyncFunction } from './types/index.js';
+import getConstructor from './utils/getConstructor.js';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const AsyncFunctionConstructor = getConstructor(async () => {});

@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isBigInt from '../../src/isBigInt';
+import values from '../__Fixtures/values.js';
+import isBigInt from '../../src/isBigInt.js';
 
 const KEY = 'bigInts';
 

@@ -1,4 +1,4 @@
-import type { Iterable } from './types';
+import type { Iterable } from './types/index.js';
 
 /**
  * Determines whether the given value is an "iterable".

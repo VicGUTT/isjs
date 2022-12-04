@@ -1,4 +1,4 @@
-import isNumber from './isNumber';
+import isNumber from './isNumber.js';
 
 /**
  * Determines whether the given value is a float.

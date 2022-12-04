@@ -1,5 +1,5 @@
-import type { Derivative } from './types';
-import isNotPrimitive from './isNotPrimitive';
+import type { Derivative } from './types/index.js';
+import isNotPrimitive from './isNotPrimitive.js';
 
 /**
  * Determines whether the given value is a "derivative".

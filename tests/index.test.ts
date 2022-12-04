@@ -1,9 +1,9 @@
 import { describe, test, expect } from 'vitest';
-import values from './__Fixtures/values';
-import file from './__utils/file';
-import is from '../src';
-import TYPES, { SUB_TYPES, SUPER_TYPES } from '../src/constants/TYPES';
-import VERSION from '../src/constants/VERSION';
+import values from './__Fixtures/values.js';
+import file from './__utils/file.js';
+import is from '../src/index.js';
+import TYPES, { SUB_TYPES, SUPER_TYPES } from '../src/constants/TYPES.js';
+import VERSION from '../src/constants/VERSION.js';
 
 type _Meta = {
     glob: (...args: unknown[]) => Record<string, { default: (value: unknown) => boolean }>;

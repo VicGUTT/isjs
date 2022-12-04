@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isAsyncFunction from '../../src/isAsyncFunction';
+import values from '../__Fixtures/values.js';
+import isAsyncFunction from '../../src/isAsyncFunction.js';
 
 const KEY = 'asyncFunctions';
 

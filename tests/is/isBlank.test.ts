@@ -5,9 +5,9 @@
  */
 
 import { describe, it, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isBlank from '../../src/isBlank';
-import isObject from '../../src/isObject';
+import values from '../__Fixtures/values.js';
+import isBlank from '../../src/isBlank.js';
+import isObject from '../../src/isObject.js';
 
 const KEY = 'blanks';
 

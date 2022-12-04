@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isDate from '../../src/isDate';
+import values from '../__Fixtures/values.js';
+import isDate from '../../src/isDate.js';
 
 const KEY = 'dates';
 

@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isSet from '../../src/isSet';
+import values from '../__Fixtures/values.js';
+import isSet from '../../src/isSet.js';
 
 const KEY = 'sets';
 

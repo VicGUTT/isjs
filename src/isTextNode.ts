@@ -1,5 +1,5 @@
-import type { ConstructorLike } from './types';
-import getConstructor from './utils/getConstructor';
+import type { ConstructorLike } from './types/index.js';
+import getConstructor from './utils/getConstructor.js';
 
 /**
  * Determines whether the given value is a Text.

@@ -5,8 +5,8 @@
  */
 
 import { describe, it, test, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isInteger from '../../src/isInteger';
+import values from '../__Fixtures/values.js';
+import isInteger from '../../src/isInteger.js';
 
 const KEY = 'integers';
 

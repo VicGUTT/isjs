@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isNodeList from '../../src/isNodeList';
+import values from '../__Fixtures/values.js';
+import isNodeList from '../../src/isNodeList.js';
 
 const KEY = 'nodeList';
 

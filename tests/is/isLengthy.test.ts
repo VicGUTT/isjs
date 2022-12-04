@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isLengthy from '../../src/isLengthy';
+import values from '../__Fixtures/values.js';
+import isLengthy from '../../src/isLengthy.js';
 
 const KEY = 'lengthy';
 

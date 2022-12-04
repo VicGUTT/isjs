@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isShadowRoot from '../../src/isShadowRoot';
+import values from '../__Fixtures/values.js';
+import isShadowRoot from '../../src/isShadowRoot.js';
 
 const KEY = 'shadowRoots';
 

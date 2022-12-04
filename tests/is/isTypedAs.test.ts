@@ -5,13 +5,13 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isTypedAs from '../../src/isTypedAs';
-import isPrimitive from '../../src/isPrimitive';
-import isArray from '../../src/isArray';
-import isInt from '../../src/isInt';
-import isObject from '../../src/isObject';
-import isFunction from '../../src/isFunction';
+import values from '../__Fixtures/values.js';
+import isTypedAs from '../../src/isTypedAs.js';
+import isPrimitive from '../../src/isPrimitive.js';
+import isArray from '../../src/isArray.js';
+import isInt from '../../src/isInt.js';
+import isObject from '../../src/isObject.js';
+import isFunction from '../../src/isFunction.js';
 
 // const KEY = 'typedAs';
 

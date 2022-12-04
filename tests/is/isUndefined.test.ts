@@ -5,8 +5,8 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import values from '../__Fixtures/values';
-import isUndefined from '../../src/isUndefined';
+import values from '../__Fixtures/values.js';
+import isUndefined from '../../src/isUndefined.js';
 
 const KEY = 'undefined';
 

@@ -1,6 +1,6 @@
 {
     "name": "@vicgutt/isjs",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "A set of JavaScript type checking helpers",
     "author": "Victor GUTT <guttvictor@yahoo.fr> (https://victorgutt.dev)",
     "license": "MIT",
